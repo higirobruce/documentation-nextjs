@@ -6,13 +6,12 @@ import Link from "next/link";
 export function Sidebar() {
   const items = [
     { label: "Overview", href: "/" },
-    { label: "View Guidelines", href: "/guidelines" },
     { label: "Software Engineering", href: "/guidelines/software" },
     { label: "Digital Certificate", href: "/guidelines/certificate" },
   ];
 
   return (
-    <aside className="w-64 border-r p-4" style={{ backgroundColor: "rgba(248, 250, 253, 1)" }}>
+    <aside className="w-64 border-r p-4 mt-6 mb-6 rounded-2xl ml-6" style={{ backgroundColor: "rgba(248, 250, 253, 1)" }}>
       <nav className="space-y-2">
         {items.map((item) => (
           <Link
