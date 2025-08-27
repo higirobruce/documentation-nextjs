@@ -33,6 +33,26 @@ export default function Home() {
                 description="Ensuring the proper integration of Public Key Infrastructure (PKI) services is essential for maintaining the security and integrity of digital systems."
                 image="/guidelines/pki.jpg"
               />
+              <GuidelineCard
+                title="Digital Signature Guidelines"
+                description="This guideline aims to provide some guidance in the proper use and application of the electronic signature in line with the laws of the Government of Rwanda."
+                image="/guidelines/signature.jpg"
+              />
+              <GuidelineCard
+                title="PKI Service Integration Guidelines"
+                description="Ensuring the proper integration of Public Key Infrastructure (PKI) services is essential for maintaining the security and integrity of digital systems."
+                image="/guidelines/pki.jpg"
+              />
+              <GuidelineCard
+                title="Digital Signature Guidelines"
+                description="This guideline aims to provide some guidance in the proper use and application of the electronic signature in line with the laws of the Government of Rwanda."
+                image="/guidelines/signature.jpg"
+              />
+              <GuidelineCard
+                title="PKI Service Integration Guidelines"
+                description="Ensuring the proper integration of Public Key Infrastructure (PKI) services is essential for maintaining the security and integrity of digital systems."
+                image="/guidelines/pki.jpg"
+              />
             </div>
           </section>
         </main>

@@ -9,7 +9,7 @@ interface GuidelineProps {
 
 export function GuidelineCard({ title, description, image }: GuidelineProps) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden bg-[#F8FAFD]">
       <div className="relative h-40 w-full">
         <Image src={image} alt={title} fill className="object-contain" />
       </div>
