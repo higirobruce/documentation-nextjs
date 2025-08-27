@@ -46,11 +46,11 @@ export const Navbar = () => {
           </button>
           {homeDropdownOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-md z-10">
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                Dashboard
+              <a href="https://www.risa.gov.rw/" className="block px-4 py-2 hover:bg-gray-100">
+                Visit our Website
               </a>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                Reports
+                Contact Us
               </a>
             </div>
           )}
