@@ -2,6 +2,7 @@ import { Sidebar } from "./components/sidebar";
 import { SpotlightCard } from "./components/spotlight-card";
 import { GuidelineCard } from "./components/guideline-card";
 import { Navbar } from "./components/navbar";
+import { Lightbulb } from "lucide-react";
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
       <div className="flex flex-1">
         <Sidebar />
         <main className="flex-1 p-8 space-y-8">
-          <div className="rounded-md bg-green-50 p-4 text-green-900 border border-green-200">
-            Explore our guidelines and reference documents to support the adoption and implementation of RISA policies and services.
+          <div className="rounded-md bg-green-50 p-4 text-green-900 border border-green-200 flex">
+            <Lightbulb className="text-green mx-2"/> Explore our guidelines and reference documents to support the adoption and implementation of RISA policies and services.
           </div>
           <section>
             <h2 className="mb-4 text-lg font-semibold">Documentation Spotlight</h2>
