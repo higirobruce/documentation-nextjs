@@ -7,8 +7,15 @@ const contentDirectory = path.join(process.cwd(), 'content');
 
 const getDirectoryStructure = (dir: string): ({
     name: string;
-    children: any;
-    path?: undefined;
+    children: ({
+        name: string;
+        children: any;
+        path?: undefined;
+    } | {
+        name: string;
+        path: string;
+        children?: undefined;
+    })[];
 } | {
     name: string;
     path: string;
