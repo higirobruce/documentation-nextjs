@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState, useEffect } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronRight, ChevronUp } from "lucide-react";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -64,7 +64,7 @@ export function Sidebar() {
           className="w-full text-left rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200/20 flex justify-between items-center"
         >
           Software Engineering
-          {softwareOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          {softwareOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
         </button>
         <div
           ref={softwareRef}
@@ -79,7 +79,7 @@ export function Sidebar() {
                 href={sub.href}
                 className={`block rounded-md px-6 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive
-                    ? "bg-[#F2F8FF] text-[#003D8F] font-semibold border-l-2 border-[#078ECE] pl-5"
+                    ? "bg-[#F2F8FF] text-[#003D8F] font-semibold  pl-5"
                     : "text-gray-500 hover:bg-[#F2F8FF] hover:text-[#003D8F]"
                 }`}
               >
@@ -95,7 +95,7 @@ export function Sidebar() {
           className="w-full text-left rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200/20 flex justify-between items-center"
         >
           Digital Certificate
-          {digitalCertOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          {digitalCertOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
         </button>
         <div
           ref={digitalCertRef}
@@ -110,7 +110,7 @@ export function Sidebar() {
                 href={sub.href}
                 className={`block rounded-md px-6 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive
-                    ? "bg-[#F2F8FF] text-[#003D8F] font-semibold border-l-2 border-[#078ECE] pl-5"
+                    ? "bg-[#F2F8FF] text-[#003D8F] font-semibold pl-5"
                     : "text-gray-500 hover:bg-[#F2F8FF] hover:text-[#003D8F]"
                 }`}
               >
@@ -125,7 +125,7 @@ export function Sidebar() {
           href="/guidelines/infrastructure"
           className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 ${
             pathname === "/guidelines/infrastructure"
-              ? "bg-[#F2F8FF] text-[#003D8F] font-semibold border-l-2 border-[#078ECE] pl-5"
+              ? "bg-[#F2F8FF] text-[#003D8F] font-semibold pl-5"
               : "text-gray-600 hover:bg-gray-200/20"
           }`}
         >
