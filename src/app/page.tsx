@@ -10,7 +10,7 @@ export default function Home() {
       <div className="flex flex-1">
         <main className="flex-1 p-8 mt-18 space-y-8">
           <div className="rounded-md bg-green-50 p-4 text-green-900 border border-green-200 flex">
-            <Lightbulb className="text-green mx-2"/> Explore our guidelines and reference documents to support the adoption and implementation of RISA policies and services.
+            <Lightbulb className="text-green mx-2" /> Browse our guidelines and reference materials to help you understand, adopt, and implement RISA policies.
           </div>
           <section id="spotlight">
             <h2 className="mb-4 text-lg font-semibold">Documentation Spotlight</h2>

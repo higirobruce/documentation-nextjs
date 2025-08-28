@@ -1,6 +1,5 @@
 
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
@@ -24,7 +23,7 @@ const findFile = (dir: string, slug: string): string | null => {
   return null;
 };
 
-interface RouteSegmentProps {
+type RouteParams = {
   params: {
     category: string;
     slug: string;
@@ -33,10 +32,10 @@ interface RouteSegmentProps {
 
 export async function GET(
   request: NextRequest,
-  props: RouteSegmentProps
-): Promise<NextResponse> {
+  { params }: RouteParams
+) {
   try {
-    const { category, slug } = props.params;
+    const { category, slug } = params;
     const categoryPath = path.join(contentDirectory, category);
     const filePath = findFile(categoryPath, slug);
 
@@ -44,9 +43,9 @@ export async function GET(
       const raw = fs.readFileSync(filePath, 'utf8');
       const content = raw.replace(/^---[\s\S]*?---\n?/, '');
       return NextResponse.json({ content });
+    } else {
+      return NextResponse.json({ error: 'File not found' }, { status: 404 });
     }
-
-    return NextResponse.json({ error: 'File not found' }, { status: 404 });
   } catch (error) {
     console.error('Error reading content file:', error);
     return NextResponse.json({ error: 'Failed to read content file' }, { status: 500 });

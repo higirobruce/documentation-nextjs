@@ -72,7 +72,7 @@ Support reports summarize these issues for effectiveness review.
 
 Product documentation describes the software product to be developed and is aimed at different audiences namely: analysts, developers, testers, users, business and maintenance teams. The main product documentation that should be produced in a project are detailed below.
 
-### 1. Software Requirements Document (Mandatory)
+### Software Requirements Document (Mandatory)
 
 A software requirements document provides information about the required system functionality based on the needs of the stakeholders. Requirements are statements of what should be done. They include business requirements stating the high level business needs to support the project along with the features and functions defining the features and functions to support the business needs. Non-functional requirements defining the features non- product requirements such as usability, performance and security.
 
