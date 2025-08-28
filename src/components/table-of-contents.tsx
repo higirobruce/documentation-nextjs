@@ -85,11 +85,11 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
             key={heading.id}
             onClick={() => handleClick(heading.id)}
             className={`
-              block w-full text-left py-2 transition-all duration-150 border-l-2 border-transparent hover:border-gray-300
+              block w-full text-left p-2 transition-all duration-150 border-transparen rounded-sm
               ${getLevelClass(heading.level)}
               ${activeId === heading.id 
-                ? "border-l-2 !border-blue-500 bg-blue-50/50 text-blue-700" 
-                : "hover:text-gray-900 hover:bg-gray-50/50"
+                ? " bg-blue-50/50 text-blue-700" 
+                : "hover:text-gray-900 hover:bg-gray-50/50 hover:cursor-pointer"
               }
             `}
           >

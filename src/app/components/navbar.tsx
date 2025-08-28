@@ -42,7 +42,7 @@ export const Navbar = () => {
         <div className="relative">
           <button
             onClick={() => setHomeDropdownOpen(!homeDropdownOpen)}
-            className="flex items-center text-[#078ECE] font-medium hover:text-blue-700"
+            className="flex items-center font-medium hover:cursor-pointer "
           >
             Home <ChevronDown size={16} className="ml-1" />
           </button>

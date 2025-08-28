@@ -53,8 +53,8 @@ export function Sidebar() {
   useEffect(() => toggleHeight(digitalCertRef, digitalCertOpen), [digitalCertOpen]);
 
   return (
-    <aside className="w-64 border-r p-4 mt-25 ml-6 bg-[#F8FAFD] border-gray-300 border-2 rounded-md transition-all duration-300 ease-in-out">
-      <nav className="space-y-2 sticky top-4">
+    <aside className="w-[350px] h-[calc(100vh-200px)] border-r p-4 mt-25 ml-6 bg-[#F8FAFD] border-gray-300 border-2 rounded-md transition-all duration-300 ease-in-out">
+      <nav className="space-y-2 top-4">
         {/* Overview Heading */}
         <h2 className="text-[#078ECE] text-lg font-semibold px-3 py-2">Overview</h2>
 
@@ -77,7 +77,7 @@ export function Sidebar() {
               <Link
                 key={sub.href}
                 href={sub.href}
-                className={`block rounded-md px-6 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`w-full block rounded-md px-6 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive
                     ? "bg-[#F2F8FF] text-[#003D8F] font-semibold  pl-5"
                     : "text-gray-500 hover:bg-[#F2F8FF] hover:text-[#003D8F]"
