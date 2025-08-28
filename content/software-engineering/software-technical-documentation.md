@@ -1,90 +1,146 @@
----
-title: Software Technical Documentation
-order: 1
----
+# Software Technical Documentation
 
-# Software Technical Documentation Guidelines
-
-As a software team, we must ensure our technical documentation is **clear, consistent, and easy to maintain**.  
-This document defines the structure, style, and best practices for writing and maintaining software technical documentation.
+Software technical documentation is a comprehensive set of documents that provide detailed information about a software product or system.
 
 ---
 
-## 1. General Principles
-
-- Documentation is part of the software – keep it up to date.
-- Write for developers, testers, and maintainers – not just yourself.
-- Keep content **simple, concise, and structured**.
-- Use **Markdown (.md)** format unless otherwise specified.
+## Introduction
+Software technical documentation is a comprehensive set of documents that provide detailed information about a software product or system. Different types of documents are created throughout the software development lifecycle. Documentation is important as it serves as a reference for developers, users and other stakeholders involved in the software development process. Documentation exists to explain product functionality, unify project-related information, and ensure common understanding between the different stakeholders in a software project.
 
 ---
 
-## 2. Documentation Structure
+## Scope and Objectives
+These guidelines detail the technical documentation that should be produced during the software development lifecycle and are applicable to all government institutions in Rwanda.
 
-Each project should include at least the following sections:
+The main objectives of having comprehensive technical software documentation are:
 
-1. **Overview**
-   - Short description of the project.
-   - High-level architecture diagram (if applicable).
-
-2. **Installation**
-   - System requirements.
-   - Step-by-step installation instructions.
-
-3. **Configuration**
-   - Environment variables.
-   - Configuration files and their purpose.
-
-4. **Usage**
-   - Commands to run the application.
-   - Example API calls or UI instructions.
-
-5. **Architecture**
-   - Main components and their responsibilities.
-   - Data flow or integration diagrams.
-
-6. **Development**
-   - How to set up a development environment.
-   - Branching and version control strategy.
-   - Coding standards and conventions.
-
-7. **Testing**
-   - Running unit, integration, and end-to-end tests.
-   - Test data guidelines.
-
-8. **Deployment**
-   - Deployment steps (manual or automated).
-   - CI/CD pipeline description.
-
-9. **Troubleshooting**
-   - Common errors and fixes.
-   - Logs location and interpretation.
-
-10. **License & References**
-    - License type (MIT, GPL, proprietary, etc.).
-    - External references, APIs, and libraries.
+- **Facilitates common understanding**: Documentation provides comprehensive information about the software's functionality, design & architecture, maintenance and usage.  
+- **Supports development**: Helps developers understand user requirements, design decisions, coding standards, and implementation details.  
+- **Aids maintenance and updates**: Facilitates troubleshooting, bug fixing and adding new features by providing information on the software's design.  
+- **Enhances collaboration**: Serves as a common reference point for team members.  
+- **Onboarding new team members**: Provides background information to help new members contribute quickly.  
+- **Supports user training and adoption**: Clear user manuals, tutorials, and guides help end-users.  
+- **Reduces support burden**: Troubleshooting guides and FAQs lower support workload.  
+- **Ensures compliance and accountability**: Provides evidence of compliance with policies, regulations, and standards.  
 
 ---
 
-## 3. Writing Style
+## Process Documentation
+Process documentation describes the course of the software project, from creation to the end of software maintenance. It serves as an authoritative guide in the development of the system and ensures that internal knowledge is retained.  
 
-- Use **headings (#, ##, ###)** to organize content.
-- Use **code blocks** for commands, configs, or code samples:
-  ```bash
-  npm install
-  npm run dev
-  ```
-- Use **lists** (bullet points or numbered) for steps or items.
-- Use **bold** and *italic* for emphasis.
-- Use **links** to reference other documentation or external resources.
-- Use **images** to illustrate concepts or diagrams.
+### Progress Reports (Mandatory)
+A project status or progress report describes the progress of a project within a specific period and compares it against the project plan. It includes:
+
+- The work that’s been completed  
+- The plan for what will follow  
+- A summary of the project budget and schedule  
+- A list of action items  
+- Issues and risks, with mitigation actions  
+
+Frequency may vary, but typically **weekly** and **monthly** reports are submitted.
 
 ---
 
-## 4. Tools and Technologies
+### Change Control Documents (Mandatory)
+A software change request document is required when a change needs to be made to a system. It should include:
 
-- **Markdown**: For writing documentation.
-- **Git**: For version control.
-- **GitHub**: For hosting documentation repositories.
-- **shadcn/ui**: For UI components and styling.
-- **Next.js**: For building the documentation portal.
+- Requester information (person/department)  
+- Nature and rationale of the change  
+- Impact on other parts of the system  
+
+---
+
+### Software Support Issue Logs and Reports (Mandatory)
+Support issue logs track raised requests and include:
+
+- Requester details  
+- Date raised  
+- Issue details & analysis  
+- Classification (based on impact)  
+- Resolution status (open/closed)  
+
+Support reports summarize these issues for effectiveness review.
+
+---
+
+## Product Documentation
+Product documentation describes the software product for analysts, developers, testers, users, and maintenance teams.
+
+### Software Requirements Document (Mandatory)
+- Includes **functional** and **non-functional** requirements.  
+- Functional: product features to support user needs.  
+- Non-functional: usability, performance, security.  
+- Agile projects use **user stories** for requirements.  
+
+---
+
+### Design Documentation (Mandatory)
+Covers **how** the product is built, including:
+
+- **Architecture & design principles** (e.g., microservices).  
+- **Solution design details**: system architecture, UI design, integration design, database design.  
+- **Diagrammatic representations**.  
+
+---
+
+### API Documentation (Mandatory)
+Contains instructions on using/integrating APIs, including:
+
+- Functions, classes, return types, arguments  
+- Tutorials and examples  
+- Automated documentation tools recommended  
+
+---
+
+### Test Documentation (Mandatory)
+Includes:  
+
+- **Test Strategy**: overall testing approach, team structure, priorities, and methodologies (functional, performance, security).  
+- **Test Plan**: what should be tested in a sprint (features, methods, timeframes, roles).  
+- **Test Cases**: detailed actions and expected results.  
+- **Test Reports**: pass/fail results and identified issues.  
+
+---
+
+### Data Migration Documentation (Mandatory)
+Required when migrating data from legacy/manual systems.  
+
+- **Data Migration Strategy**: scope, datasets, approach, cleansing/conversion methods.  
+- **Data Migration Reports**: record of test cycles, issues, and final production migration.  
+
+---
+
+### User Documentation (Mandatory)
+Created for end-users in simple language.  
+
+Forms:  
+- Printed manuals  
+- Online knowledge bases  
+- FAQs, tutorials, video guides  
+- Embedded assistance and support portals  
+
+---
+
+### Software Configuration & Maintenance Documentation (Mandatory)
+Captures information for effective software maintenance:  
+
+- **System Overview**  
+- **Configuration Items**  
+- **Configuration Management Plan**  
+- **Configuration Settings**  
+- **Installation Instructions**  
+- **Integration & Interoperability**  
+- **Performance & Scalability**  
+- **Security Considerations**  
+- **Testing & Validation**  
+- **Documentation & Support**  
+
+---
+
+### Project Plans and Schedules (Mandatory)
+- Define project scope, schedule, deliverables, milestones, and tasks.  
+- **Waterfall**: detailed work breakdown structure.  
+- **Agile**: product roadmaps, backlog, release & sprint plans.  
+
+---
+

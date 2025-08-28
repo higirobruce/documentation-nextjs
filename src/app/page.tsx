@@ -11,18 +11,18 @@ export default function Home() {
       <Navbar />
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 p-8 space-y-8">
+        <main className="flex-1 p-8 mt-18 space-y-8">
           <div className="rounded-md bg-green-50 p-4 text-green-900 border border-green-200 flex">
             <Lightbulb className="text-green mx-2"/> Explore our guidelines and reference documents to support the adoption and implementation of RISA policies and services.
           </div>
-          <section>
+          <section id="spotlight">
             <h2 className="mb-4 text-lg font-semibold">Documentation Spotlight</h2>
             <div className="grid grid-cols-2 gap-4">
               <SpotlightCard title="Latest Releases" />
               <SpotlightCard title="Most Popular Guidelines" />
             </div>
           </section>
-          <section>
+          <section id="guidelines">
             <h2 className="mb-4 text-lg font-semibold">Guidelines</h2>
             <div className="grid grid-cols-2 gap-6">
               <GuidelineCard
@@ -36,24 +36,14 @@ export default function Home() {
                 image="/guidelines/pki.jpg"
               />
               <GuidelineCard
-                title="Digital Signature Guidelines"
-                description="This guideline aims to provide some guidance in the proper use and application of the electronic signature in line with the laws of the Government of Rwanda."
-                image="/guidelines/signature.jpg"
+                title="Operational Guidelines"
+                description="Operational Guidelines provide standardized procedures and best practices to ensure consistency, efficiency, and accountability in daily operations."
+                image="/guidelines/operational.png"
               />
               <GuidelineCard
-                title="PKI Service Integration Guidelines"
-                description="Ensuring the proper integration of Public Key Infrastructure (PKI) services is essential for maintaining the security and integrity of digital systems."
-                image="/guidelines/pki.jpg"
-              />
-              <GuidelineCard
-                title="Digital Signature Guidelines"
-                description="This guideline aims to provide some guidance in the proper use and application of the electronic signature in line with the laws of the Government of Rwanda."
-                image="/guidelines/signature.jpg"
-              />
-              <GuidelineCard
-                title="PKI Service Integration Guidelines"
-                description="Ensuring the proper integration of Public Key Infrastructure (PKI) services is essential for maintaining the security and integrity of digital systems."
-                image="/guidelines/pki.jpg"
+                title="Strategy Guidelines"
+                description="Strategy Guidelines define the principles and frameworks that guide long-term planning, decision-making, and sustainable development."
+                image="/guidelines/strategy.jpg"
               />
             </div>
           </section>

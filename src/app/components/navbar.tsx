@@ -1,25 +1,26 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
-import {Search}  from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 
 export const Navbar = () => {
   const [homeDropdownOpen, setHomeDropdownOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white shadow-sm border-b border-gray-200">
       
+      {/* Logo & Title */}
       <div className="flex items-center space-x-4">
         <Image src="/guidelines/risa_logo.png" alt="RISA Logo" width={150} height={150} />
-        <span className="text-[rgba(5,77,111,1)] font-semibold text-lg">
+        <Link href="/" className="text-[#078ECE] font-semibold text-lg hover:text-[#003D8F] transition-colors duration-200">
           Guidelines
-        </span>
+        </Link>
       </div>
 
-      
+      {/* Search Bar */}
       <div className="flex-1 max-w-xl mx-8">
         <div className="relative">
-          
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
             <Search size={20}/>
           </span>
@@ -34,15 +35,16 @@ export const Navbar = () => {
         </div>
       </div>
 
-      
+      {/* Right Section */}
       <div className="flex items-center space-x-4">
-        
+
+        {/* Home Dropdown */}
         <div className="relative">
           <button
             onClick={() => setHomeDropdownOpen(!homeDropdownOpen)}
-            className="text-[rgba(5,77,111,1)] font-medium"
+            className="flex items-center text-[#078ECE] font-medium hover:text-blue-700"
           >
-            Home ▼
+            Home <ChevronDown size={16} className="ml-1" />
           </button>
           {homeDropdownOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-md z-10">
@@ -56,13 +58,11 @@ export const Navbar = () => {
           )}
         </div>
 
-        
-        <button className="px-4 py-2 border border-[rgba(5,77,111,1)] text-[rgba(5,77,111,1)] bg-white rounded hover:bg-blue-50">
+        {/* Auth Buttons */}
+        <button className="px-4 py-2 border border-[#078ECE] text-[#078ECE] bg-white rounded hover:bg-blue-50">
           Log in
         </button>
-
-    {/* Signup button */}
-        <button className="px-4 py-2 bg-[rgba(5,77,111,1)] text-white rounded hover:bg-blue-900">
+        <button className="px-4 py-2 bg-[#078ECE] text-white rounded hover:bg-blue-900">
           Sign up
         </button>
       </div>
