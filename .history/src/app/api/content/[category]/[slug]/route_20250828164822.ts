@@ -24,19 +24,12 @@ const findFile = (dir: string, slug: string): string | null => {
   return null;
 };
 
-interface RouteSegmentProps {
-  params: {
-    category: string;
-    slug: string;
-  }
-}
-
 export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ category: string; slug: string; }> }
-): Promise<NextResponse> {
+  _request: NextRequest,
+  { params }: { params: { category: string; slug: string } }
+) {
   try {
-    const { category, slug } = await params;
+    const { category, slug } = params;
     const categoryPath = path.join(contentDirectory, category);
     const filePath = findFile(categoryPath, slug);
 

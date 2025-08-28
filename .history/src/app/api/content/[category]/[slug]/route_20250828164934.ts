@@ -33,10 +33,10 @@ interface RouteSegmentProps {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ category: string; slug: string; }> }
+  props: RouteSegmentProps
 ): Promise<NextResponse> {
   try {
-    const { category, slug } = await params;
+    const { category, slug } = props.params;
     const categoryPath = path.join(contentDirectory, category);
     const filePath = findFile(categoryPath, slug);
 

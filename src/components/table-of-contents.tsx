@@ -88,7 +88,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
               block w-full text-left p-2 transition-all duration-150 border-transparen rounded-sm
               ${getLevelClass(heading.level)}
               ${activeId === heading.id 
-                ? " bg-blue-50/50 text-blue-700" 
+                ? " bg-blue-100 text-blue-700" 
                 : "hover:text-gray-900 hover:bg-gray-50/50 hover:cursor-pointer"
               }
             `}
@@ -102,7 +102,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       
       {/* Progress indicator */}
       <div className="mt-6 pt-4 border-t border-gray-100">
-        <div className="text-xs text-gray-400 uppercase tracking-wide font-medium">
+        <div className="text-xs text-gray-400 tracking-wide font-medium">
           {activeId && headings.find(h => h.id === activeId) 
             ? `Reading: ${headings.find(h => h.id === activeId)?.text?.slice(0, 25)}${(headings.find(h => h.id === activeId)?.text?.length || 0) > 25 ? '...' : ''}`
             : 'Scroll to navigate'

@@ -13,7 +13,7 @@ export const Navbar = () => {
       {/* Logo & Title */}
       <div className="flex items-center space-x-4">
         <Image src="/guidelines/risa_logo.png" alt="RISA Logo" width={150} height={150} />
-        <Link href="/" className="text-[#078ECE] font-semibold text-lg hover:text-[#003D8F] transition-colors duration-200">
+        <Link href="/" className="text-[#054D6F] font-semibold text-lg hover:text-[#054D6F]/80 transition-colors duration-200">
           Guidelines
         </Link>
       </div>
@@ -26,6 +26,7 @@ export const Navbar = () => {
           </span>
           <input
             type="text"
+            disabled
             placeholder="Ask or search"
             className="w-full border rounded-lg pl-10 pr-16 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -59,10 +60,10 @@ export const Navbar = () => {
         </div>
 
         {/* Auth Buttons */}
-        <button className="px-4 py-2 border border-[#078ECE] text-[#078ECE] bg-white rounded hover:bg-blue-50">
+        <button className="px-4 py-2 border border-[#054D6F] text-[#054D6F] hover:cursor-pointer  bg-white rounded hover:bg-blue-50">
           Log in
         </button>
-        <button className="px-4 py-2 bg-[#078ECE] text-white rounded hover:bg-blue-900">
+        <button className="px-4 py-2 bg-[#054D6F] text-white hover:cursor-pointer rounded hover:bg-[#054D6F]/90">
           Sign up
         </button>
       </div>
