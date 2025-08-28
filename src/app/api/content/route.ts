@@ -6,20 +6,21 @@ import path from 'path';
 const contentDirectory = path.join(process.cwd(), 'content');
 
 const getDirectoryStructure = (dir: string): ({
+  name: string;
+  children: ({
     name: string;
-    children: ({
-        name: string;
-        children: any;
-        path?: undefined;
-    } | {
-        name: string;
-        path: string;
-        children?: undefined;
-    })[];
-} | {
+    children: any;
+    path?: undefined;
+  } | {
     name: string;
     path: string;
     children?: undefined;
+  })[];
+  path?: undefined;
+} | {
+  name: string;
+  path: string;
+  children?: undefined;
 })[] => {
   const dirents = fs.readdirSync(dir, { withFileTypes: true });
   const structure = dirents
