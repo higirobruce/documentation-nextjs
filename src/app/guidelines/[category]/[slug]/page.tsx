@@ -1,37 +1,22 @@
-import fs from "fs";
-import path from "path";
 import { notFound } from "next/navigation";
 import { MarkdownPageClient } from "./client-page";
 
-function getFilePath(category: string, slug: string) {
-  const base = path.join(process.cwd(), "content");
-  if (category === "software") {
-    if (slug === "technical-docs") {
-      return path.join(base, "software-engineering", "software-technical-documentation.md");
-    }
-    if (slug === "lifecycle") {
-      return path.join(base, "software-engineering", "software-lifecycle-management.md");
-    }
+async function getContent(category: string, slug: string) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}:${process.env.NEXT_PUBLIC_API_PORT}/api/content/${category}/${slug}`);
+  if (!res.ok) {
+    return null;
   }
-  if (category === "digital-cert") {
-    if (slug === "signature") {
-      return path.join(base, "digital-cert", "signature.md");
-    }
-    if (slug === "pki") {
-      return path.join(base, "digital-cert", "pki.md");
-    }
-  }
-  return null;
+  const data = await res.json();
+  return data.content;
 }
 
-export default async function MarkdownPage({ params }: { params: Promise<{ category: string; slug: string }> }) {
-  const { category, slug } = await params;
-  const filePath = getFilePath(category, slug);
-  if (!filePath || !fs.existsSync(filePath)) {
+export default async function MarkdownPage({ params }: { params: { category: string; slug: string } }) {
+  const { category, slug } = params;
+  const content = await getContent(category, slug);
+
+  if (!content) {
     notFound();
   }
-  const raw = fs.readFileSync(filePath, "utf8");
-  const content = raw.replace(/^---[\s\S]*?---\n?/, "");
 
   return <MarkdownPageClient content={content} />;
 }

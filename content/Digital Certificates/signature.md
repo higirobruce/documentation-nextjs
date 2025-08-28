@@ -1,5 +1,7 @@
 # Digital Signature Guidelines
 
+---
+
 This guideline aims to provide some guidance in the proper user and application of the electronic signature in line with the laws of the Government of Rwanda.
 
 ## Some Definitions
