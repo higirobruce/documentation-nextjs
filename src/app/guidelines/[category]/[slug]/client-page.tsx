@@ -24,7 +24,7 @@ export function MarkdownPageClient({ content }: MarkdownPageClientProps) {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex flex-1">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <main className="flex-1 p-8 mt-12">
           <div className="max-w-4xl">
             <MarkdownRenderer 
@@ -35,7 +35,6 @@ export function MarkdownPageClient({ content }: MarkdownPageClientProps) {
         </main>
         <TableOfContents headings={headings} />
       </div>
-      <Footer />
     </div>
   );
 }
