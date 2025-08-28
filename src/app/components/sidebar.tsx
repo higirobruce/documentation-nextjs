@@ -90,9 +90,10 @@ export function Sidebar() {
   }, [pathname, navItems]);
 
   return (
-    <aside className="w-[350px] h-[calc(100vh-200px)] border-r p-4 mt-25 ml-6 bg-[#F8FAFD] border-gray-300 border-2 rounded-md transition-all duration-300 ease-in-out">
-      <nav className="space-y-2 top-4">
-        <h2 className="text-[#078ECE] text-lg font-semibold px-3 py-2">Overview</h2>
+    <aside className="w-[350px] h-[calc(100vh-200px)] border-r p-4 mt-32 ml-6 bg-[#F8FAFD] border-gray-300 border-2 rounded-md transition-all duration-300 ease-in-out">
+      <nav className="space-y-2 top-6 sticky">
+        <Link href="/" className="text-[#078ECE] text-lg font-semibold px-3 py-2" >Overview</Link>
+        {/* <h2 className="text-[#078ECE] text-lg font-semibold px-3 py-2">Overview</h2> */}
         {navItems.map((item) => (
           <NavItem key={item.name} item={item} parentPath="/guidelines" currentPath={pathname} openItems={openItems} setOpenItems={setOpenItems} />
         ))}

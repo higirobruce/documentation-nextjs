@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { avenir } from "./fonts"; 
+import { avenir } from "./fonts";
 import "./globals.css";
 import { Sidebar } from "./components/sidebar";
 import Footer from "./components/footer";
+import { Navbar } from "./components/navbar";
 
 export const metadata: Metadata = {
   title: "Guidelines",
@@ -19,9 +20,12 @@ export default function RootLayout({
       <body className={`${avenir.variable} antialiased`}>
         <div className="flex">
           <Sidebar />
-          <main className="flex-1 p-8">{children}</main>
+          <main className="flex-1 p-8 overflow-scroll h-screen">
+            <Navbar />
+            {children}
+          </main>
         </div>
-         <Footer />
+        <Footer />
       </body>
     </html>
   );
