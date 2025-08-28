@@ -175,46 +175,46 @@ html {
 }
 
 .markdown-content h1.heading-1 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #078ECE;
-  margin-bottom: 1.5rem;
+  color: #000000;
+  margin-bottom: 1.25rem;
 }
 
 .markdown-content h2.heading-2 {
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: #003D8F;
-  margin-top: 1.75rem;
-}
-
-.markdown-content h3.heading-3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1F2937;
+  color: #000000;
   margin-top: 1.5rem;
 }
 
-.markdown-content h4.heading-4 {
+.markdown-content h3.heading-3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #374151;
+  color: #1F2937;
   margin-top: 1.25rem;
+}
+
+.markdown-content h4.heading-4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 1rem;
 }
 
 .markdown-content h5.heading-5,
 .markdown-content h6.heading-6 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #4B5563;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .markdown-content p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   color: #374151;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .markdown-content ul,
@@ -355,15 +355,19 @@ html {
 /* Responsive typography */
 @media (max-width: 768px) {
   .markdown-content h1.heading-1 {
-    font-size: 1.875rem;
-  }
-  
-  .markdown-content h2.heading-2 {
     font-size: 1.5rem;
   }
   
-  .markdown-content h3.heading-3 {
+  .markdown-content h2.heading-2 {
     font-size: 1.25rem;
+  }
+  
+  .markdown-content h3.heading-3 {
+    font-size: 1.125rem;
+  }
+  
+  .markdown-content p {
+    font-size: 0.9rem;
   }
   
   .markdown-content ul,
