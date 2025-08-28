@@ -5,7 +5,15 @@ import path from 'path';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
-const getDirectoryStructure = (dir: string): any => {
+const getDirectoryStructure = (dir: string): ({
+    name: string;
+    children: any;
+    path?: undefined;
+} | {
+    name: string;
+    path: string;
+    children?: undefined;
+})[] => {
   const dirents = fs.readdirSync(dir, { withFileTypes: true });
   const structure = dirents
     .map((dirent) => {
