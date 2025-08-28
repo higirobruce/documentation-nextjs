@@ -10,8 +10,8 @@ async function getContent(category: string, slug: string) {
   return data.content;
 }
 
-export default async function MarkdownPage({ params }: { params: { category: string; slug: string } }) {
-  const { category, slug } = params;
+export default async function MarkdownPage({ params }: { params: Promise<{ category: string; slug: string; }> }) {
+  const { category, slug } = await params;
   const content = await getContent(category, slug);
 
   if (!content) {
